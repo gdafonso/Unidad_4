@@ -68,8 +68,8 @@ public class ControlLogin extends LinearLayout {
         //obtenemos referencias
         textousuario = (EditText) findViewById(R.id.editText1);
         textopassword = (EditText) findViewById(R.id.editText2);
-        botoncondiciones = (Button) findViewById(R.id.button1);
-        botonlogin = (Button) findViewById(R.id.button2);
+        botoncondiciones = (Button) findViewById(R.id.btnAceptar);
+        botonlogin = (Button) findViewById(R.id.btnDeclinar);
         botonacercade = (Button) findViewById(R.id.button3);
         botonsalir = (Button) findViewById(R.id.button4);
         labellogin = (TextView) findViewById(R.id.textView4);

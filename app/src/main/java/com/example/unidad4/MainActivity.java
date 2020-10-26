@@ -1,21 +1,28 @@
 package com.example.unidad4;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private ControlLogin controldelogin;
+    private static final int REQUEST_CODE = 1;
+    private static final String MESSAGE = "";
+
+    private Button btnAcceder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button acceder=(Button)findViewById(R.id.button2);
-        acceder.setEnabled(false);
+        btnAcceder=(Button)findViewById(R.id.btnDeclinar);
+        btnAcceder.setEnabled(false);
 
         controldelogin = (ControlLogin) findViewById (R.id.Controllogin1);
         controldelogin.setOnLoginListener (new OnLoginListener() {
@@ -40,10 +47,8 @@ public class MainActivity extends AppCompatActivity {
         controldelogin.setOnCondicionesListener (new OnCondicionesListener() {
 
             public void onCondiciones () {
-                Intent intent;
-
-                intent = new Intent(MainActivity.this, CondicionesActivity.class);
-                startActivityForResult(intent, 5555);
+                Intent intent = new Intent(MainActivity.this, CondicionesActivity.class);
+                startActivityForResult(intent, REQUEST_CODE);
             }
         });
 
@@ -57,11 +62,21 @@ public class MainActivity extends AppCompatActivity {
         controldelogin.setOnAcercadeListener (new OnAcercadeListener() {
 
             public void onAcercade () {
-                Intent intent;
-
-                intent = new Intent(MainActivity.this, AcercadeActivity.class);
+                Intent intent = new Intent(MainActivity.this, AcercadeActivity.class);
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQUEST_CODE){
+            if(resultCode == Activity.RESULT_OK){
+                btnAcceder.setEnabled(true);
+            } else if(resultCode == Activity.RESULT_CANCELED){
+                btnAcceder.setEnabled(false);
+            }
+        }
     }
 }

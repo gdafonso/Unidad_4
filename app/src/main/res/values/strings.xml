@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Unidad 4</string>
+    <string name="Control_Login">Coronapp</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Password">Password</string>
+    <string name="Acceder">Acceder</string>
+    <string name="Acerca_de">Acerca de</string>
+    <string name="Salir">Salir</string>
+    <string name="Condiciones">Aceptar / Declinar condiciones</string>
+    <string name="Texto_Acerca_de">Texto del acerca de</string>
+    <string name="Acceso">Bienvenido a Coronapp</string>
+    <string name="Texto_Condiciones">Texto de las condiciones</string>
+    <string name="Necesidad">Es necesario aceptar las condiciones para poder acceder a la aplicación</string>
+    <string name="Aceptar">Aceptar</string>
+    <string name="Declinar">Declinar</string>
+
+</resources>

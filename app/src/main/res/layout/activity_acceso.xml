@@ -7,7 +7,7 @@
     tools:context=".AccesoActivity">
 
     <TextView
-        android:id="@+id/textview1"
+        android:id="@+id/textView1"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -19,11 +19,65 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
-        android:id="@+id/textview2"
+        android:id="@+id/textView2"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text=""
-        app:layout_constraintTop_toBottomOf="@+id/textview1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
         app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btnPCRPositiva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PCRPositiva"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btnPCRNegativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PCRNegativa"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPCRPositiva" />
+
+    <Button
+        android:id="@+id/btnLlamadaCovid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LlamadaCovid"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPCRNegativa" />
+
+    <Button
+        android:id="@+id/btnLlamada112"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Llamada112"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLlamadaCovid" />
+
+    <Button
+        android:id="@+id/btnHospitales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Hospitales"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLlamada112" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Salir"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHospitales" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

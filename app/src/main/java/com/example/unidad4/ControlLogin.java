@@ -78,23 +78,13 @@ public class ControlLogin extends LinearLayout {
         asignarEventos();
     }
 
-    public void setMensaje(String Mensaje) {
-        labellogin.setText(Mensaje);
-    }
+    public void setMensaje(String Mensaje) { labellogin.setText(Mensaje); }
 
-    public void setOnLoginListener(OnLoginListener oll) {
-        onloginlistener = oll;
-    }
+    public void setOnLoginListener(OnLoginListener oll) { onloginlistener = oll; }
 
-    public void setOnCondicionesListener(OnCondicionesListener ocl) {
-        oncondicioneslistener = ocl;
-    }
+    public void setOnCondicionesListener(OnCondicionesListener ocl) { oncondicioneslistener = ocl; }
 
-    public void setOnSalirListener(OnSalirListener osl) {
-        onsalirlistener = osl;
-    }
+    public void setOnSalirListener(OnSalirListener osl) { onsalirlistener = osl; }
 
-    public void setOnAcercadeListener(OnAcercadeListener oal) {
-        onacercadelistener = oal;
-    }
+    public void setOnAcercadeListener(OnAcercadeListener oal) { onacercadelistener = oal; }
 }

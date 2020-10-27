@@ -13,5 +13,10 @@
     <string name="Necesidad">Es necesario aceptar las condiciones para poder acceder a la aplicación</string>
     <string name="Aceptar">Aceptar</string>
     <string name="Declinar">Declinar</string>
+    <string name="PCRPositiva">Informar PCR Positiva</string>
+    <string name="PCRNegativa">Informar PCR Negativa</string>
+    <string name="LlamadaCovid">Llamar al teléfono del COVID</string>
+    <string name="Llamada112">Llamar a emergencias 112</string>
+    <string name="Hospitales">Buscar hospitales cercanos</string>
 
 </resources>

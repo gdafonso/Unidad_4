@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class AccesoActivity extends AppCompatActivity {
     private Button btnSalir, btnHospitales, btnLlamada112, btnLlamadaCovid, btnPCRNegativa, btnPCRPositiva;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,13 +84,10 @@ public class AccesoActivity extends AppCompatActivity {
         btnHospitales.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Uri gmmIntentUri = Uri.parse("geo:37.9913674,-1.185472?q=hospitals");
+                Uri gmmIntentUri = Uri.parse("geo:37.9913674,-1.185472?q=hospitals");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
-                startActivity(mapIntent);*/
-                Intent intent = new Intent(AccesoActivity.this, MapaHospitales.class);
-                startActivity(intent);
-
+                startActivity(mapIntent);
             }
         });
 
@@ -99,6 +97,8 @@ public class AccesoActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
 
     }
 }

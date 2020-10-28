@@ -18,5 +18,6 @@
     <string name="LlamadaCovid">Llamar al teléfono del COVID</string>
     <string name="Llamada112">Llamar a emergencias 112</string>
     <string name="Hospitales">Buscar hospitales cercanos</string>
+    <string name="Lugares">Lugares</string>
 
 </resources>

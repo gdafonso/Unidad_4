@@ -6,10 +6,10 @@
     <string name="Acceder">Acceder</string>
     <string name="Acerca_de">Acerca de</string>
     <string name="Salir">Salir</string>
-    <string name="Condiciones">Aceptar / Declinar condiciones</string>
-    <string name="Texto_Acerca_de">Texto del acerca de</string>
+    <string name="Condiciones">Condiciones</string>
+    <string name="Texto_Acerca_de">Aplicación desarrollada por Gustavo Daniel Afonso Hernández (gdafonso@alu.ucam.edu) y Francisco Durante Escobedo (fdurante@alu.ucam.edu) para la asignatura de Desarrollo de Aplicaciones Móviles (Android)</string>
     <string name="Acceso">Bienvenido a Coronapp</string>
-    <string name="Texto_Condiciones">Texto de las condiciones</string>
+    <string name="Texto_Condiciones">Las presentes condiciones generales de uso de la página web, regulan los términos y condiciones de acceso y uso de www.ucam.edu, propiedad de (indicar el nombre de la empresa o profesional propietario de el portal), con domicilio en (indicar) y con Código de Identificación Fiscal número (indicar), en adelante, «la Empresa», que el usuario del Portal deberá de leer y aceptar para usar todos los servicios e información que se facilitan desde el portal. El mero acceso y/o utilización del portal, de todos o parte de sus contenidos y/o servicios significa la plena aceptación de las presentes condiciones generales de uso. </string>
     <string name="Necesidad">Es necesario aceptar las condiciones para poder acceder a la aplicación</string>
     <string name="Aceptar">Aceptar</string>
     <string name="Declinar">Declinar</string>

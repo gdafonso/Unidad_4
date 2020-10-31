@@ -42,7 +42,8 @@ public class ControlLogin extends LinearLayout {
         botonlogin.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                onloginlistener.onLogin(textousuario.getText().toString(), textopassword.getText().toString());
+                onloginlistener.onLogin(textousuario.getText().toString(),
+                        textopassword.getText().toString());
             }
         });
         botonacercade.setOnClickListener(new OnClickListener() {
@@ -69,7 +70,7 @@ public class ControlLogin extends LinearLayout {
         textousuario = (EditText) findViewById(R.id.editText1);
         textopassword = (EditText) findViewById(R.id.editText2);
         botoncondiciones = (Button) findViewById(R.id.btnAceptar);
-        botonlogin = (Button) findViewById(R.id.btnDeclinar);
+        botonlogin = (Button) findViewById(R.id.btnAcceder);
         botonacercade = (Button) findViewById(R.id.button3);
         botonsalir = (Button) findViewById(R.id.button4);
         labellogin = (TextView) findViewById(R.id.textView4);

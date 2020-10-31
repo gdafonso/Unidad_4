@@ -23,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Condiciones"
+        android:drawableLeft="@drawable/ic_action_paste"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
@@ -77,7 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/btnDeclinar"
+        android:id="@+id/btnAcceder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Acceder"
@@ -92,7 +93,7 @@
         android:text="@string/Acerca_de"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDeclinar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAcceder" />
 
     <Button
         android:id="@+id/button4"

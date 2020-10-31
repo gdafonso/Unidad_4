@@ -7,7 +7,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private ControlLogin controldelogin;
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnAcceder=(Button)findViewById(R.id.btnDeclinar);
+        btnAcceder=(Button)findViewById(R.id.btnAcceder);
         btnAcceder.setEnabled(false);
 
         controldelogin = (ControlLogin) findViewById (R.id.Controllogin1);
@@ -33,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 //se valida si coinciden los usuarios
                 if (usuario.equals("gdafonso") && password.equals("1234")) {
                     controldelogin.setMensaje("Acceso concedido");
-                    Intent intencion = new Intent(MainActivity.this, AccesoActivity.class);
+                    Intent intencion = new Intent(MainActivity.this,
+                            AccesoActivity.class);
 
                     Bundle b = new Bundle();
                     b.putString("Usuario",usuario);
@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         controldelogin.setOnCondicionesListener (new OnCondicionesListener() {
 
             public void onCondiciones () {
-                Intent intent = new Intent(MainActivity.this, CondicionesActivity.class);
+                Intent intent = new Intent(MainActivity.this,
+                        CondicionesActivity.class);
                 startActivityForResult(intent, REQUEST_CODE);
             }
         });

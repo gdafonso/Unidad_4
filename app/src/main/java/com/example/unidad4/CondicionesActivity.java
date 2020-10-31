@@ -1,14 +1,11 @@
 package com.example.unidad4;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class CondicionesActivity extends AppCompatActivity {
 
@@ -20,7 +17,7 @@ public class CondicionesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_condiciones);
 
         btnAceptado = findViewById(R.id.btnAceptar);
-        btnDeclinado = findViewById(R.id.btnDeclinar);
+        btnDeclinado = findViewById(R.id.btnAcceder);
 
         btnAceptado.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,8 +40,6 @@ public class CondicionesActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 
 }

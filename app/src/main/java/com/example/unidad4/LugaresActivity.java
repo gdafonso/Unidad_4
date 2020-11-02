@@ -18,6 +18,10 @@ public class LugaresActivity extends Activity {
         setContentView(R.layout.edicion_lugar);
     }
 
+    /*
+    Método que se ejecutará cuando se pulse sobre el botón
+    de AÑADIR LUGAR
+     */
     public void onClickAddLugar(View view){
         // Add a new student record
         ContentValues values = new ContentValues();
@@ -37,6 +41,10 @@ public class LugaresActivity extends Activity {
                 uri.toString(), Toast.LENGTH_LONG).show();
     }
 
+    /*
+    Método que se ejecutará cuando se pulse sobre el botón
+    de MOSTRAR LUGARES
+ */
     public void onClickListarLugares(View view){
         // Retrieve student records
         String URL = "content://com.example.unidad4.LugaresProvider";

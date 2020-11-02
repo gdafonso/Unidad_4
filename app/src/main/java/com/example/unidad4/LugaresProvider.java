@@ -41,7 +41,7 @@ public class LugaresProvider extends ContentProvider {
     }
 
     /**
-     * Database specific constant declarations
+     * Definición de la BBDD
      */
 
     private SQLiteDatabase db;
@@ -56,8 +56,8 @@ public class LugaresProvider extends ContentProvider {
                     " telefono TEXT NOT NULL);";
 
     /**
-     * Helper class that actually creates and manages
-     * the provider's underlying data repository.
+     * Helper para crear y administrar
+     * la BBDD
      */
     private static class DatabaseHelper extends SQLiteOpenHelper {
         DatabaseHelper(Context context){
@@ -83,24 +83,23 @@ public class LugaresProvider extends ContentProvider {
         DatabaseHelper dbHelper = new DatabaseHelper(context);
 
         /**
-         * Create a write able database which will trigger its
-         * creation if it doesn't already exist.
+         * Crea la BBDD
          */
 
         db = dbHelper.getWritableDatabase();
-        return (db == null)? false:true;
+        return db != null;
     }
 
     @Nullable
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues contentValues) {
         /**
-         * Add a new student record
+         * Añade un Lugar
          */
         long rowID = db.insert(	LUGARES_TABLE_NAME, "", contentValues);
 
         /**
-         * If record is added successfully
+         * Si se ha añadido satisfactoriamente
          */
         if (rowID > 0) {
             Uri _uri = ContentUris.withAppendedId(CONTENT_URI, rowID);
@@ -108,12 +107,13 @@ public class LugaresProvider extends ContentProvider {
             return _uri;
         }
 
-        throw new SQLException("Failed to add a record into " + uri);
+        throw new SQLException("Error al añadir el registro en " + uri);
     }
 
     @Nullable
     @Override
-    public Cursor query(Uri uri, String[] projection, String selection,String[] selectionArgs, String sortOrder) {
+    public Cursor query(Uri uri, String[] projection, String selection,
+                        String[] selectionArgs, String sortOrder) {
             SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
             qb.setTables(LUGARES_TABLE_NAME);
 
@@ -131,7 +131,7 @@ public class LugaresProvider extends ContentProvider {
 
             if (sortOrder == null || sortOrder == ""){
                 /**
-                 * By default sort on student names
+                 * Por defecto se muestran ordenados por nombre
                  */
                 sortOrder = NOMBRE;
             }
@@ -159,7 +159,7 @@ public class LugaresProvider extends ContentProvider {
                         (!TextUtils.isEmpty(selection) ? "AND (" + selection + ')' : ""), selectionArgs);
                 break;
             default:
-                throw new IllegalArgumentException("Unknown URI " + uri);
+                throw new IllegalArgumentException("URI desconocido " + uri);
         }
 
         getContext().getContentResolver().notifyChange(uri, null);
@@ -181,7 +181,7 @@ public class LugaresProvider extends ContentProvider {
                                 (!TextUtils.isEmpty(selection) ? "AND (" +selection + ')' : ""), selectionArgs);
                 break;
             default:
-                throw new IllegalArgumentException("Unknown URI " + uri );
+                throw new IllegalArgumentException("URI desconocido " + uri );
         }
 
         getContext().getContentResolver().notifyChange(uri, null);
@@ -193,12 +193,12 @@ public class LugaresProvider extends ContentProvider {
     public String getType(Uri uri) {
         switch (uriMatcher.match(uri)){
             /**
-             * Get all student records
+             * Muestra todos los lugares
              */
             case LUGARES:
                 return "vnd.android.cursor.dir/vnd.example.lugares";
             /**
-             * Get a particular student
+             * Muestra un Lugar mediante su ID
              */
             case LUGAR_ID:
                 return "vnd.android.cursor.item/vnd.example.lugares";

@@ -19,5 +19,8 @@
     <string name="Llamada112">Llamar a emergencias 112</string>
     <string name="Hospitales">Buscar hospitales cercanos</string>
     <string name="Lugares">Lugares</string>
+    <string name="btnAddLugar">Añadir Lugar</string>
+    <string name="btnShowLugares">Mostrar Lugares</string>
+    <string name="btnLugares">Lugares</string>
 
 </resources>

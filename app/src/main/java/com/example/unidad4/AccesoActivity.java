@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class AccesoActivity extends AppCompatActivity {
-    private Button btnSalir, btnHospitales, btnLlamada112, btnLlamadaCovid, btnPCRNegativa, btnPCRPositiva;
+    private Button btnSalir, btnHospitales, btnLlamada112, btnLlamadaCovid, btnPCRNegativa, btnPCRPositiva, btnLugares;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class AccesoActivity extends AppCompatActivity {
         btnLlamadaCovid = findViewById(R.id.btnLlamadaCovid);
         btnPCRNegativa = findViewById(R.id.btnPCRNegativa);
         btnPCRPositiva = findViewById(R.id.btnPCRPositiva);
+        btnLugares = findViewById(R.id.btnLugares);
 
         //localizar controles
         TextView textSaludo = (TextView)findViewById(R.id.textView2);
@@ -98,6 +99,13 @@ public class AccesoActivity extends AppCompatActivity {
             }
         });
 
+        btnLugares.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AccesoActivity.this, LugaresActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

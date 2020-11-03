@@ -22,5 +22,10 @@
     <string name="btnAddLugar">Añadir Lugar</string>
     <string name="btnShowLugares">Mostrar Lugares</string>
     <string name="btnLugares">Lugares</string>
-
+    <string name="txtTituloNombre">Nombre</string>
+    <string name="txtNombre"></string>
+    <string name="txtTituloDireccion">Dirección</string>
+    <string name="txtDireccion"></string>
+    <string name="txtTituloTelefono">Teléfono</string>
+    <string name="txtTelefono"></string>
 </resources>

@@ -12,6 +12,7 @@
         <activity android:name=".CondicionesActivity"></activity>
         <activity android:name=".AccesoActivity" />
         <activity android:name=".LugaresActivity" />
+        <activity android:name=".ListadoLugaresActivity" />
         <activity android:name=".AcercadeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

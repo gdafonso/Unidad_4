@@ -2,20 +2,35 @@ package com.example.unidad4;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
 public class LugaresActivity extends Activity {
+
+    private Button btnListado;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edicion_lugar);
+
+        btnListado = findViewById(R.id.btnShowLugares);
+
+        btnListado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LugaresActivity.this, ListadoLugaresActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     /*
